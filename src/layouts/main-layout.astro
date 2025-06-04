@@ -1,5 +1,8 @@
 ---
+import Navigation from '@/components/navigation.astro'
 import '@/styles/global.css'
+
+const url = Astro.url
 ---
 
 <!doctype html>
@@ -9,11 +12,36 @@ import '@/styles/global.css'
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Koen Vercauteren | Front-end developer</title>
+    <title>Koen Vercauteren — Euricom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-primary">
     <div class="m-auto h-dvh w-dvw max-w-[1586px] p-6">
       <slot />
     </div>
+    <div class="absolute bottom-3 flex w-full justify-center">
+      <Navigation {url} />
+    </div>
   </body>
 </html>
+
+<style>
+  body {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+</style>

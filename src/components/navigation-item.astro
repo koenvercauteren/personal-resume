@@ -1,0 +1,20 @@
+---
+import Marker from '@/assets/marker.svg'
+
+type Props = {
+  showMarker: boolean
+  href: string
+}
+
+const { showMarker, href } = Astro.props
+---
+
+<li class="relative">
+  <a
+    {href}
+    class="group relative z-10 flex items-center justify-center gap-1.5 font-medium"
+  >
+    <slot />
+  </a>
+  {showMarker && <Marker aria-hidden="true" class="absolute inset-0 m-auto" />}
+</li>

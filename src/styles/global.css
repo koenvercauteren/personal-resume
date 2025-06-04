@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #fade0c;
+  --color-primary: #fef1e8;
+  --color-secondary: #71ccdf;
+
+  --font-family-heading: "Bricolage Grotesque", sans-serif;
+  --font-family-primary: "Inter", sans-serif;
+  --font-family-secondary: "Lexend Mega", sans-serif;
+
+  --font-sans: var(--font-family-primary);
+}
+
+*::selection {
+  background-color: var(--color-secondary);
+  color: white;
 }

@@ -4,12 +4,20 @@ import Layout from '@/layouts/main-layout.astro'
 
 <Layout>
   <main class="h-full">
-    <div class="flex h-full flex-col items-start justify-center gap-3">
-      <p class="text-xl font-semibold">Hello, world!</p>
-      <h1 class="text-8xl font-bold">I'm Koen 👋🏻</h1>
-      <p class="mt-3 text-4xl font-semibold">
+    <div class="flex h-full flex-col items-start justify-center gap-6">
+      <p class="text-xl font-medium">Hello world,</p>
+      <h1 class="-mt-3 font-family-heading text-8xl font-black">I'm Koen 👋🏻</h1>
+      <p class="text-4xl font-medium">
         I turn ideas and pixels into memorable experiences on the web.
       </p>
+
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/koen-vercauteren"
+        class="rounded-md border-2 border-black bg-secondary p-3 font-family-secondary font-semibold uppercase shadow-[3px_3px_0px_rgb(0,0,0)] transition-all hover:translate-[1px] hover:shadow-[2px_2px_0px_rgb(0,0,0)] active:translate-[3px] active:shadow-none"
+      >
+        Let's connect!
+      </a>
     </div>
   </main>
 </Layout>

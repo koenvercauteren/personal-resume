@@ -1,0 +1,40 @@
+---
+import HomeFilled from '@/assets/home-filled.svg'
+import Home from '@/assets/home.svg'
+import PersonFilled from '@/assets/person-filled.svg'
+import Person from '@/assets/person.svg'
+import ArticleFilled from '@/assets/article-filled.svg'
+import Article from '@/assets/article.svg'
+import NavigationItem from './navigation-item.astro'
+
+type Props = {
+  url: URL
+}
+
+const { url } = Astro.props
+const isHome = url.pathname === '/'
+const isAbout = url.pathname === '/about'
+const isExperience = url.pathname === '/experience'
+---
+
+<nav>
+  <ul
+    class="flex gap-6 rounded-full border-2 border-black bg-primary px-6 py-3 shadow-[2px_2px_0px_rgb(0,0,0)]"
+  >
+    <NavigationItem showMarker={isHome} href="/">
+      <HomeFilled aria-hidden="true" class="group-hover:hidden" />
+      <Home aria-hidden="true" class="hidden group-hover:block" />
+      Home
+    </NavigationItem>
+    <NavigationItem showMarker={isAbout} href="/about">
+      <PersonFilled aria-hidden="true" class="group-hover:hidden" />
+      <Person aria-hidden="true" class="hidden group-hover:block" />
+      About
+    </NavigationItem>
+    <NavigationItem showMarker={isExperience} href="/experience">
+      <ArticleFilled aria-hidden="true" class="group-hover:hidden" />
+      <Article aria-hidden="true" class="hidden group-hover:block" />
+      Experience
+    </NavigationItem>
+  </ul>
+</nav>
