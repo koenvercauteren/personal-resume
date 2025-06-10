@@ -13,19 +13,24 @@ import { Image } from 'astro:assets'
           aria-hidden="true"
           class="absolute -top-[80px] -left-[90px]"
         />
-        <h1 class="font-family-heading text-8xl font-black">I'm Koen</h1>
+        <h1
+          class="font-family-heading text-6xl font-black sm:text-7xl lg:text-8xl"
+        >
+          I'm Koen
+        </h1>
         <Image
           src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
           aria-hidden="true"
           alt=""
           width="96"
           height="96"
+          class="size-[60px] sm:size-[72px] lg:size-[96px]"
         />
       </div>
-      <p class="text-4xl font-medium">
+      <p class="text-2xl font-medium lg:text-3xl">
         I turn ideas and pixels into memorable experiences on the web.
       </p>
-      <div class="flex gap-3">
+      <div class="flex flex-col gap-3 sm:flex-row">
         <Button href="https://www.euri.com/en/contact">work with me</Button>
         <Button
           href="https://www.linkedin.com/in/koen-vercauteren"

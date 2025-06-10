@@ -1,5 +1,50 @@
 ---
 import Layout from '@/layouts/main-layout.astro'
+import Decoration2 from '@/assets/decoration-2.svg'
+import { Image } from 'astro:assets'
+import profileImage from '@/assets/profile-image.jpg'
+import Button from '@/components/button.astro'
+import Card from '@/components/card.astro'
 ---
 
-<Layout />
+<Layout>
+  <main class="flex h-full flex-col gap-9">
+    <div class="flex gap-6">
+      <h1 class="font-family-heading text-6xl font-black">About me</h1>
+      <Image
+        src="https://fonts.gstatic.com/s/e/notoemoji/latest/2764_fe0f/512.gif"
+        aria-hidden="true"
+        alt=""
+        width="96"
+        height="96"
+        class="size-[60px]"
+      />
+    </div>
+    <Card>
+      <div class="relative w-full">
+        <Image
+          src={profileImage}
+          alt="Profile image of Koen Vercauteren"
+          class="w-[84%] rounded-lg"
+        />
+        <Decoration2 class="absolute top-[14%] right-0 w-[34%]" />
+      </div>
+      <h2 class="z-10 -mt-16 text-5xl font-black text-white uppercase">
+        front-end
+        <br />
+        <span class="text-black">developer</span>
+      </h2>
+      <p class="text-lg">
+        I believe <b>great interfaces</b> start with
+        <b> empathy for the user</b>, and that philosophy guides every decision
+        I make — from layout and interaction to performance and accessibility.
+      </p>
+      <Button
+        href="https://www.linkedin.com/in/koen-vercauteren"
+        variant="secondary"
+      >
+        let's connect
+      </Button>
+    </Card>
+  </main>
+</Layout>
