@@ -25,8 +25,8 @@ import NeoWrapper from '@/components/neo-wrapper.astro'
         class="size-[48px] sm:size-[60px]"
       />
     </div>
-    <div class="flex gap-6">
-      <Card class="max-w-sm">
+    <div class="flex flex-col gap-6 md:flex-row">
+      <Card class="md:max-w-xs lg:max-w-sm">
         <div class="relative w-full">
           <Image
             src={profileImage}
@@ -35,7 +35,9 @@ import NeoWrapper from '@/components/neo-wrapper.astro'
           />
           <Decoration2 class="absolute top-[14%] right-0 w-[34%]" />
         </div>
-        <h2 class="z-10 -mt-16 text-5xl font-black text-white uppercase">
+        <h2
+          class="z-10 -mt-14 text-4xl font-black text-white uppercase lg:-mt-16 lg:text-5xl"
+        >
           front-end
           <br />
           <span class="text-black">developer</span>
