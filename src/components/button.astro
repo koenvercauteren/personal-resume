@@ -1,6 +1,4 @@
 ---
-import clsx from 'clsx'
-
 type Props = {
   variant?: 'primary' | 'secondary'
   href: string
@@ -12,10 +10,10 @@ const { variant = 'primary', href } = Astro.props
 <a
   {href}
   target="_blank"
-  class={clsx(
-    variant === 'primary' ? 'bg-primary' : 'bg-secondary',
-    'rounded-md border-2 border-black  p-3 font-family-secondary font-semibold uppercase shadow-[3px_3px_0px_rgb(0,0,0)] transition-all hover:translate-[1px] hover:shadow-[2px_2px_0px_rgb(0,0,0)] active:translate-[3px] active:shadow-none'
-  )}
+  class:list={[
+    'rounded-md border-2 border-black p-3 font-family-secondary font-semibold uppercase shadow-[3px_3px_0px_rgb(0,0,0)] transition-all hover:translate-[1px] hover:shadow-[2px_2px_0px_rgb(0,0,0)] active:translate-[3px] active:shadow-none',
+    variant === 'primary' ? 'bg-primary' : 'bg-secondary'
+  ]}
 >
   <slot />
 </a>

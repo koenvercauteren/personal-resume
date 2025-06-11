@@ -1,0 +1,38 @@
+---
+type Props = {
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'background'
+}
+
+const { variant = 'secondary' } = Astro.props
+
+let className = 'bg-secondary'
+
+switch (variant) {
+  case 'primary':
+    className = 'bg-primary'
+    break
+  case 'tertiary':
+    className = 'bg-tertiary'
+    break
+  case 'background':
+    className = 'bg-background'
+    break
+}
+---
+
+<div
+  aria-hidden="true"
+  class:list={[
+    'rounded-sm border-2 border-black p-1.5 shadow-[2px_2px_0px_rgb(0,0,0)]',
+    className
+  ]}
+>
+  <slot />
+</div>
+
+<style lang="scss">
+  .bg-background {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 0);
+    background-size: 3px 3px;
+  }
+</style>

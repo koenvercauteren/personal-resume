@@ -1,5 +1,16 @@
-<div
-  class="flex max-w-sm flex-col items-start gap-6 rounded-xl border-2 border-black bg-tertiary p-6 shadow-[2px_2px_0px_rgb(0,0,0)]"
+---
+type Props = {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<article
+  class:list={[
+    'flex flex-col items-start gap-6 rounded-xl border-2 border-black bg-tertiary p-6 shadow-[2px_2px_0px_rgb(0,0,0)]',
+    className
+  ]}
 >
   <slot />
-</div>
+</article>

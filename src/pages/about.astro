@@ -1,50 +1,100 @@
 ---
 import Layout from '@/layouts/main-layout.astro'
 import Decoration2 from '@/assets/decoration-2.svg'
+import SchoolFilled from '@/assets/school-filled.svg'
+import FavoriteFilled from '@/assets/favorite-filled.svg'
 import { Image } from 'astro:assets'
 import profileImage from '@/assets/profile-image.jpg'
 import Button from '@/components/button.astro'
 import Card from '@/components/card.astro'
+import NeoWrapper from '@/components/neo-wrapper.astro'
 ---
 
 <Layout>
-  <main class="flex h-full flex-col gap-9">
-    <div class="flex gap-6">
-      <h1 class="font-family-heading text-6xl font-black">About me</h1>
+  <main class="flex flex-1 flex-col gap-9">
+    <div class="flex gap-3">
+      <h1 class="font-family-heading text-5xl font-black sm:text-6xl">
+        About me
+      </h1>
       <Image
         src="https://fonts.gstatic.com/s/e/notoemoji/latest/2764_fe0f/512.gif"
         aria-hidden="true"
         alt=""
         width="96"
         height="96"
-        class="size-[60px]"
+        class="size-[48px] sm:size-[60px]"
       />
     </div>
-    <Card>
-      <div class="relative w-full">
-        <Image
-          src={profileImage}
-          alt="Profile image of Koen Vercauteren"
-          class="w-[84%] rounded-lg"
-        />
-        <Decoration2 class="absolute top-[14%] right-0 w-[34%]" />
+    <div class="flex gap-6">
+      <Card class="max-w-sm">
+        <div class="relative w-full">
+          <Image
+            src={profileImage}
+            alt="Profile image of Koen Vercauteren"
+            class="w-[84%] rounded-lg"
+          />
+          <Decoration2 class="absolute top-[14%] right-0 w-[34%]" />
+        </div>
+        <h2 class="z-10 -mt-16 text-5xl font-black text-white uppercase">
+          front-end
+          <br />
+          <span class="text-black">developer</span>
+        </h2>
+        <p class="text-lg">
+          I believe <b>great interfaces</b> start with
+          <b> empathy for the user</b>, and that philosophy guides every
+          decision I make — from layout and interaction to performance and
+          accessibility.
+        </p>
+        <Button
+          href="https://www.linkedin.com/in/koen-vercauteren"
+          variant="secondary"
+        >
+          let's connect
+        </Button>
+      </Card>
+      <div class="flex flex-1 flex-col gap-6">
+        <Card class="flex-1">
+          <div class="flex items-center gap-3">
+            <NeoWrapper>
+              <SchoolFilled />
+            </NeoWrapper>
+            <h2 class="text-xl font-bold">Education</h2>
+          </div>
+          <span class="text-xl font-bold">
+            Bachelor in Applied Computer Science, Application Development
+          </span>
+          <p class="text-lg">
+            A <b>hands-on</b> program centered around analyzing, designing, and building
+            modern software applications. It emphasized
+            <b> practical experience </b>with programming, databases and
+            user-centered design, providing a solid foundation in both front-end
+            and back-end development.
+          </p>
+        </Card>
+        <Card class="flex-1">
+          <div class="flex items-center gap-3">
+            <NeoWrapper>
+              <FavoriteFilled />
+            </NeoWrapper>
+            <h2 class="text-xl font-bold">Interests</h2>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <NeoWrapper variant="background">
+              <span class="font-semibold">Calisthenics</span>
+            </NeoWrapper>
+            <NeoWrapper variant="background">
+              <span class="font-semibold">Weight training</span>
+            </NeoWrapper>
+            <NeoWrapper variant="background">
+              <span class="font-semibold">Video games</span>
+            </NeoWrapper>
+            <NeoWrapper variant="background">
+              <span class="font-semibold">Music</span>
+            </NeoWrapper>
+          </div>
+        </Card>
       </div>
-      <h2 class="z-10 -mt-16 text-5xl font-black text-white uppercase">
-        front-end
-        <br />
-        <span class="text-black">developer</span>
-      </h2>
-      <p class="text-lg">
-        I believe <b>great interfaces</b> start with
-        <b> empathy for the user</b>, and that philosophy guides every decision
-        I make — from layout and interaction to performance and accessibility.
-      </p>
-      <Button
-        href="https://www.linkedin.com/in/koen-vercauteren"
-        variant="secondary"
-      >
-        let's connect
-      </Button>
-    </Card>
+    </div>
   </main>
 </Layout>
