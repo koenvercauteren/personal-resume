@@ -5,6 +5,15 @@ import SchoolFilled from '@/assets/school-filled.svg'
 import FavoriteFilled from '@/assets/favorite-filled.svg'
 import { Image } from 'astro:assets'
 import profileImage from '@/assets/profile-image.jpg'
+import astroStamp from '@/assets/astro-stamp.svg'
+import figmaStamp from '@/assets/figma-stamp.svg'
+import litStamp from '@/assets/lit-stamp.svg'
+import nodejsStamp from '@/assets/nodejs-stamp.svg'
+import reactStamp from '@/assets/react-stamp.svg'
+import roocodeStamp from '@/assets/roocode-stamp.svg'
+import tailwindStamp from '@/assets/tailwind-stamp.svg'
+import typescriptStamp from '@/assets/typescript-stamp.svg'
+import vscodeStamp from '@/assets/vscode-stamp.svg'
 import Button from '@/components/button.astro'
 import Card from '@/components/card.astro'
 import NeoWrapper from '@/components/neo-wrapper.astro'
@@ -96,6 +105,19 @@ import NeoWrapper from '@/components/neo-wrapper.astro'
           </div>
         </Card>
       </div>
+    </div>
+    <h2 class="font-family-heading text-4xl font-black">
+      Technologies & tools
+    </h2>
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+      <Image style="width: 100%;" src={reactStamp} alt="React" />
+      <Image style="width: 100%;" src={typescriptStamp} alt="TypeScript" />
+      <Image style="width: 100%;" src={tailwindStamp} alt="Tailwind" />
+      <Image style="width: 100%;" src={astroStamp} alt="Astro" />
+      <Image style="width: 100%;" src={litStamp} alt="Lit" />
+      <Image style="width: 100%;" src={nodejsStamp} alt="NodeJS" />
+      <Image style="width: 100%;" src={vscodeStamp} alt="Visual Studio Code" />
+      <Image style="width: 100%;" src={figmaStamp} alt="Figma" />
     </div>
   </main>
 </Layout>

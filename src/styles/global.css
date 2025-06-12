@@ -17,3 +17,7 @@
   background-color: var(--color-primary);
   color: white;
 }
+
+html {
+  scrollbar-gutter: stable;
+}
