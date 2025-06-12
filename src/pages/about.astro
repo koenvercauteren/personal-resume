@@ -37,12 +37,16 @@ import NeoWrapper from '@/components/neo-wrapper.astro'
     <div class="flex flex-col gap-6 md:flex-row">
       <Card class="md:max-w-xs lg:max-w-sm">
         <div class="relative w-full">
-          <Image
-            src={profileImage}
-            alt="Profile image of Koen Vercauteren"
-            class="w-[84%] rounded-lg"
-          />
-          <Decoration2 class="absolute top-[14%] right-0 w-[34%]" />
+          <div
+            class="relative w-[84%] after:absolute after:inset-0 after:rounded-lg after:bg-black after:content-['']"
+          >
+            <Image
+              src={profileImage}
+              alt="Profile image of Koen Vercauteren"
+              class="relative z-10 rounded-lg"
+            />
+          </div>
+          <Decoration2 class="absolute top-[14%] right-0 z-10 w-[34%]" />
         </div>
         <h2
           class="z-10 -mt-14 text-4xl font-black text-white uppercase lg:-mt-16 lg:text-5xl"
@@ -110,14 +114,59 @@ import NeoWrapper from '@/components/neo-wrapper.astro'
       Technologies & tools
     </h2>
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
-      <Image style="width: 100%;" src={reactStamp} alt="React" />
-      <Image style="width: 100%;" src={typescriptStamp} alt="TypeScript" />
-      <Image style="width: 100%;" src={tailwindStamp} alt="Tailwind" />
-      <Image style="width: 100%;" src={astroStamp} alt="Astro" />
-      <Image style="width: 100%;" src={litStamp} alt="Lit" />
-      <Image style="width: 100%;" src={nodejsStamp} alt="NodeJS" />
-      <Image style="width: 100%;" src={vscodeStamp} alt="Visual Studio Code" />
-      <Image style="width: 100%;" src={figmaStamp} alt="Figma" />
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image class="relative z-10 w-full" src={reactStamp} alt="React" />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image
+          class="relative z-10 w-full"
+          src={typescriptStamp}
+          alt="TypeScript"
+        />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image
+          class="relative z-10 w-full"
+          src={tailwindStamp}
+          alt="Tailwind"
+        />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image class="relative z-10 w-full" src={astroStamp} alt="Astro" />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image class="relative z-10 w-full" src={litStamp} alt="Lit" />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image class="relative z-10 w-full" src={nodejsStamp} alt="NodeJS" />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image
+          class="relative z-10 w-full"
+          src={vscodeStamp}
+          alt="Visual Studio Code"
+        />
+      </div>
+      <div
+        class="relative after:absolute after:inset-3 after:rounded-lg after:bg-black after:content-['']"
+      >
+        <Image class="relative z-10 w-full" src={figmaStamp} alt="Figma" />
+      </div>
     </div>
+    <h2 class="font-family-heading text-4xl font-black">Music I vibe to</h2>
   </main>
 </Layout>
