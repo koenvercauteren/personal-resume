@@ -1,10 +1,11 @@
 ---
 import Layout from '@/layouts/main-layout.astro'
 import { Image } from 'astro:assets'
+import Card from '@/components/card.astro'
 ---
 
 <Layout>
-  <main class="flex h-full flex-col gap-9">
+  <main class="flex size-full flex-col gap-9">
     <div class="flex gap-3">
       <h1 class="font-family-heading text-5xl font-black sm:text-6xl">
         Experience
@@ -17,6 +18,167 @@ import { Image } from 'astro:assets'
         height="96"
         class="size-[48px] sm:size-[60px]"
       />
+    </div>
+    <!-- Timeline Container -->
+    <div class="relative mx-auto w-full">
+      <!-- Vertical Line (Mobile: left, Desktop: center) -->
+      <div
+        class="absolute top-0 bottom-0 left-0 w-1.5 rounded-full bg-black md:left-1/2 md:-translate-x-1/2"
+      >
+      </div>
+
+      <!-- Timeline Items -->
+      <div class="space-y-9">
+        <!-- Item 1 -->
+        <div class="relative md:flex md:items-center">
+          <!-- Dot -->
+          <div
+            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+          >
+          </div>
+          <!-- Content Card (Mobile: right, Desktop: alternates) -->
+          <div class="md:w-1/2 md:pr-8">
+            <Card class="ml-8 md:ml-0">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-bold">Reynaers Aluminium</h3>
+                <p class="text-sm font-semibold">Feb 2025 - Present</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p>
+                  At Reynaers Aluminium, I contributed as a front-end developer
+                  to the creation of a <b>secure, user-friendly AI chatbot</b>.
+                </p>
+                <p>
+                  I improved the UI using modern technologies, refactored the
+                  codebase, and helped deliver an
+                  <b> intuitive solution</b>.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative md:flex md:flex-row-reverse md:items-center">
+          <!-- Dot -->
+          <div
+            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+          >
+          </div>
+          <!-- Content Card (Mobile: right, Desktop: alternates) -->
+          <div class="mt-6 md:mt-0 md:w-1/2 md:pl-8">
+            <Card class="ml-8 md:ml-0">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-bold">Katoen Natie</h3>
+                <p class="text-sm font-semibold">Dec 2019 - Jan 2025</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p>
+                  At Katoen Natie, I worked in various teams where I combined
+                  front-end development with <b>team guidance</b> and close collaboration
+                  with others.
+                </p>
+                <p>
+                  I contributed to invoicing, warehouse management, and site
+                  visit applications. I also played a <b>key role</b> in the development
+                  of the Hexagon <b>design system</b>.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="relative md:flex md:items-center">
+          <!-- Dot -->
+          <div
+            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+          >
+          </div>
+          <!-- Content Card (Mobile: right, Desktop: alternates) -->
+          <div class="mt-6 md:mt-0 md:w-1/2 md:pr-8">
+            <Card class="ml-8 md:ml-0">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-bold">Pelckmans Uitgevers</h3>
+                <p class="text-sm font-semibold">Jul 2018 - Oct 2019</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p>
+                  During my time at Pelckmans Publishers, I contributed to
+                  digital
+                  <b>learning platforms</b>, most notably a virtual whiteboard.
+                </p>
+                <p>
+                  These projects taught me how technology can make education
+                  more
+                  <b>accessible</b> and <b>effective</b> for both students and teachers.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="relative md:flex md:flex-row-reverse md:items-center">
+          <!-- Dot -->
+          <div
+            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+          >
+          </div>
+          <!-- Content Card (Mobile: right, Desktop: alternates) -->
+          <div class="mt-6 md:mt-0 md:w-1/2 md:pl-8">
+            <Card class="ml-8 md:ml-0">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-bold">Euricom Studio</h3>
+                <p class="text-sm font-semibold">Sep 2017 - May 2018</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p>
+                  In between projects I contributed to applications where I
+                  combined technical and analytical skills to develop
+                  <b> user-friendly and efficient </b>solutions.
+                </p>
+                <p>
+                  For instance, I worked on a web application for video
+                  interviews and modernized Euricom's website using a
+                  <b> static site generator </b>
+                  and CMS integration.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="relative md:flex md:items-center">
+          <!-- Dot -->
+          <div
+            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+          >
+          </div>
+          <!-- Content Card (Mobile: right, Desktop: alternates) -->
+          <div class="mt-6 md:mt-0 md:w-1/2 md:pr-8">
+            <Card class="ml-8 md:ml-0">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-bold">Jstack</h3>
+                <p class="text-sm font-semibold">Nov 2017 - Apr 2018</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p>
+                  While working at Jstack, I was involved in the development of
+                  Carcollect, a digital tool aimed at streamlining
+                  <b> taxation and car transactions</b>.
+                </p>
+                <p>
+                  As a junior developer, I quickly learned to work with
+                  <b> React </b>
+                  and actively contributed to improving both the frontend and backend
+                  of the application.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </Layout>

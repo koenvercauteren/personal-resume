@@ -168,13 +168,17 @@ import NeoWrapper from '@/components/neo-wrapper.astro'
       </div>
     </div>
     <h2 class="font-family-heading text-4xl font-black">Music I vibe to</h2>
-    <iframe
-      title="Spotify playlist"
-      class="rounded-xl"
-      src="https://open.spotify.com/embed/playlist/5iurwNbNFeFqJ9uCH3Witt?utm_source=generator&theme=0"
-      width="100%"
-      height="425"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
+    <div
+      class="relative after:absolute after:inset-0 after:rounded-lg after:bg-black after:content-['']"
+    >
+      <iframe
+        title="Spotify playlist"
+        class="relative z-10 rounded-xl"
+        src="https://open.spotify.com/embed/playlist/5iurwNbNFeFqJ9uCH3Witt?utm_source=generator&theme=0"
+        width="100%"
+        height="425"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
   </main>
 </Layout>
