@@ -13,6 +13,9 @@ export default defineConfig({
   image: {
     experimentalLayout: "constrained",
   },
+  redirects: {
+    "/": "/neobrutalism",
+  },
   vite: {
     plugins: [tailwindcss()],
   },

@@ -1,7 +1,12 @@
 ---
-import Layout from '@/layouts/main-layout.astro'
+import Layout from '@/layouts/neobrutalism-layout.astro'
 import { Image } from 'astro:assets'
 import Card from '@/components/card.astro'
+import Decoration3 from '@/assets/decoration-3.svg'
+import Decoration4 from '@/assets/decoration-4.svg'
+import Decoration2 from '@/assets/decoration-2.svg'
+import Decoration5 from '@/assets/decoration-5.svg'
+import Decoration6 from '@/assets/decoration-6.svg'
 ---
 
 <Layout>
@@ -33,7 +38,7 @@ import Card from '@/components/card.astro'
         <div class="relative md:flex md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
@@ -56,13 +61,19 @@ import Card from '@/components/card.astro'
               </div>
             </Card>
           </div>
+          <Decoration3
+            class:list={[
+              'absolute -bottom-16 -left-16 -z-10 hidden',
+              'md:block'
+            ]}
+          />
         </div>
 
         <!-- Item 2 -->
         <div class="relative md:flex md:flex-row-reverse md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
@@ -86,13 +97,19 @@ import Card from '@/components/card.astro'
               </div>
             </Card>
           </div>
+          <Decoration5
+            class:list={[
+              'absolute -top-16 -right-16 -z-10 hidden rotate-12',
+              'md:block'
+            ]}
+          />
         </div>
 
         <!-- Item 3 -->
         <div class="relative md:flex md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
@@ -116,12 +133,19 @@ import Card from '@/components/card.astro'
               </div>
             </Card>
           </div>
+          <Decoration6
+            class:list={[
+              'absolute -bottom-6 -left-16 -z-10 hidden rotate-90',
+              'md:block'
+            ]}
+          />
         </div>
+
         <!-- Item 4 -->
         <div class="relative md:flex md:flex-row-reverse md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
@@ -146,13 +170,16 @@ import Card from '@/components/card.astro'
               </div>
             </Card>
           </div>
+          <Decoration2
+            class:list={['absolute -top-16 -right-16 -z-10 hidden', 'md:block']}
+          />
         </div>
 
         <!-- Item 5 -->
         <div class="relative md:flex md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-0 left-[-9px] z-10 size-6 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
@@ -177,6 +204,12 @@ import Card from '@/components/card.astro'
               </div>
             </Card>
           </div>
+          <Decoration4
+            class:list={[
+              'absolute -bottom-10 -left-10 -z-10 hidden',
+              'md:block'
+            ]}
+          />
         </div>
       </div>
     </div>
