@@ -2,11 +2,11 @@
 import Layout from '@/layouts/neobrutalism-layout.astro'
 import { Image } from 'astro:assets'
 import Card from '@/components/card.astro'
-import Decoration3 from '@/assets/decoration-3.svg'
-import Decoration4 from '@/assets/decoration-4.svg'
-import Decoration2 from '@/assets/decoration-2.svg'
-import Decoration5 from '@/assets/decoration-5.svg'
-import Decoration6 from '@/assets/decoration-6.svg'
+import EuricomLogo from '@/assets/euricom-logo.svg'
+import ReynaersLogo from '@/assets/reynaers-logo.svg'
+import KatoenNatieLogo from '@/assets/katoen-natie-logo.svg'
+import PelckmansLogo from '@/assets/pelckmans-logo.svg'
+import JstackLogo from '@/assets/jstack-logo.svg'
 ---
 
 <Layout>
@@ -44,9 +44,16 @@ import Decoration6 from '@/assets/decoration-6.svg'
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
           <div class="md:w-1/2 md:pr-8">
             <Card class="ml-8 md:ml-0">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold">Reynaers Aluminium</h3>
-                <p class="text-sm font-semibold">Feb 2025 - Present</p>
+              <div class="flex gap-3">
+                <div
+                  class="size-[52px] rounded-sm border-2 border-black bg-white p-2"
+                >
+                  <ReynaersLogo class="size-full" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-xl font-bold">Reynaers Aluminium</h3>
+                  <p class="text-sm font-semibold">Feb 2025 - Present</p>
+                </div>
               </div>
               <div class="flex flex-col gap-3">
                 <p>
@@ -61,27 +68,28 @@ import Decoration6 from '@/assets/decoration-6.svg'
               </div>
             </Card>
           </div>
-          <Decoration3
-            class:list={[
-              'absolute -bottom-14 -left-14 -z-10 hidden',
-              'md:block'
-            ]}
-          />
         </div>
 
         <!-- Item 2 -->
         <div class="relative md:flex md:flex-row-reverse md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-secondary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
           <div class="mt-6 md:mt-0 md:w-1/2 md:pl-8">
             <Card class="ml-8 md:ml-0">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold">Katoen Natie</h3>
-                <p class="text-sm font-semibold">Dec 2019 - Jan 2025</p>
+              <div class="flex gap-3">
+                <div
+                  class="size-[52px] rounded-sm border-2 border-black bg-white p-2"
+                >
+                  <KatoenNatieLogo class="size-full" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-xl font-bold">Katoen Natie</h3>
+                  <p class="text-sm font-semibold">Dec 2019 - Jan 2025</p>
+                </div>
               </div>
               <div class="flex flex-col gap-3">
                 <p>
@@ -97,12 +105,6 @@ import Decoration6 from '@/assets/decoration-6.svg'
               </div>
             </Card>
           </div>
-          <Decoration5
-            class:list={[
-              'absolute -top-14 -right-14 -z-10 hidden rotate-12',
-              'md:block'
-            ]}
-          />
         </div>
 
         <!-- Item 3 -->
@@ -115,9 +117,16 @@ import Decoration6 from '@/assets/decoration-6.svg'
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
           <div class="mt-6 md:mt-0 md:w-1/2 md:pr-8">
             <Card class="ml-8 md:ml-0">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold">Pelckmans Uitgevers</h3>
-                <p class="text-sm font-semibold">Jul 2018 - Oct 2019</p>
+              <div class="flex gap-3">
+                <div
+                  class="size-[52px] rounded-sm border-2 border-black bg-white p-2"
+                >
+                  <PelckmansLogo class="size-full" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-xl font-bold">Pelckmans Uitgevers</h3>
+                  <p class="text-sm font-semibold">Jul 2018 - Oct 2019</p>
+                </div>
               </div>
               <div class="flex flex-col gap-3">
                 <p>
@@ -133,27 +142,28 @@ import Decoration6 from '@/assets/decoration-6.svg'
               </div>
             </Card>
           </div>
-          <Decoration6
-            class:list={[
-              'absolute -bottom-6 -left-16 -z-10 hidden rotate-90',
-              'md:block'
-            ]}
-          />
         </div>
 
         <!-- Item 4 -->
         <div class="relative md:flex md:flex-row-reverse md:items-center">
           <!-- Dot -->
           <div
-            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-primary md:left-1/2 md:-translate-x-1/2"
+            class="absolute top-1/2 left-[-9px] z-10 size-6 -translate-y-1/2 rounded-full border-2 border-black bg-secondary md:left-1/2 md:-translate-x-1/2"
           >
           </div>
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
           <div class="mt-6 md:mt-0 md:w-1/2 md:pl-8">
             <Card class="ml-8 md:ml-0">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold">Euricom Studio</h3>
-                <p class="text-sm font-semibold">Sep 2017 - May 2018</p>
+              <div class="flex gap-3">
+                <div
+                  class="size-[52px] rounded-sm border-2 border-black bg-white p-2"
+                >
+                  <EuricomLogo class="size-full" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-xl font-bold">Euricom Studio</h3>
+                  <p class="text-sm font-semibold">Sep 2017 - May 2018</p>
+                </div>
               </div>
               <div class="flex flex-col gap-3">
                 <p>
@@ -170,9 +180,6 @@ import Decoration6 from '@/assets/decoration-6.svg'
               </div>
             </Card>
           </div>
-          <Decoration2
-            class:list={['absolute -top-14 -right-14 -z-10 hidden', 'md:block']}
-          />
         </div>
 
         <!-- Item 5 -->
@@ -185,14 +192,21 @@ import Decoration6 from '@/assets/decoration-6.svg'
           <!-- Content Card (Mobile: right, Desktop: alternates) -->
           <div class="mt-6 md:mt-0 md:w-1/2 md:pr-8">
             <Card class="ml-8 md:ml-0">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold">Jstack</h3>
-                <p class="text-sm font-semibold">Nov 2017 - Apr 2018</p>
+              <div class="flex gap-3">
+                <div
+                  class="size-[52px] rounded-sm border-2 border-black bg-white p-2"
+                >
+                  <JstackLogo class="size-full" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-xl font-bold">Jstack</h3>
+                  <p class="text-sm font-semibold">Nov 2017 - Apr 2018</p>
+                </div>
               </div>
               <div class="flex flex-col gap-3">
                 <p>
-                  While working at Jstack, I was involved in the development of
-                  Carcollect, a digital tool aimed at streamlining
+                  While working with Jstack, I was involved in the development
+                  of Carcollect, a digital tool aimed at streamlining
                   <b> taxation and car transactions</b>.
                 </p>
                 <p>
@@ -204,12 +218,6 @@ import Decoration6 from '@/assets/decoration-6.svg'
               </div>
             </Card>
           </div>
-          <Decoration4
-            class:list={[
-              'absolute -bottom-10 -left-10 -z-10 hidden',
-              'md:block'
-            ]}
-          />
         </div>
       </div>
     </div>
