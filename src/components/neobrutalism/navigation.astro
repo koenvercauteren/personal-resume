@@ -22,17 +22,17 @@ const isHome = !isAbout && !isExperience
   <ul
     class="flex gap-6 rounded-full border-2 border-black bg-background px-6 py-3 shadow-[2px_2px_0px_rgb(0,0,0)]"
   >
-    <NavigationItem showMarker={isHome} href={`/${prefix}`}>
+    <NavigationItem isActive={isHome} href={`/${prefix}`}>
       <HomeFilled aria-hidden="true" class="group-hover:hidden" />
       <Home aria-hidden="true" class="hidden group-hover:block" />
       Home
     </NavigationItem>
-    <NavigationItem showMarker={isAbout} href={`/${prefix}/about`}>
+    <NavigationItem isActive={isAbout} href={`/${prefix}/about`}>
       <PersonFilled aria-hidden="true" class="group-hover:hidden" />
       <Person aria-hidden="true" class="hidden group-hover:block" />
       About
     </NavigationItem>
-    <NavigationItem showMarker={isExperience} href={`/${prefix}/experience`}>
+    <NavigationItem isActive={isExperience} href={`/${prefix}/experience`}>
       <ArticleFilled aria-hidden="true" class="group-hover:hidden" />
       <Article aria-hidden="true" class="hidden group-hover:block" />
       Experience

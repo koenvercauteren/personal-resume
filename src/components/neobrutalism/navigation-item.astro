@@ -2,11 +2,11 @@
 import Marker from '@/assets/marker.svg'
 
 type Props = {
-  showMarker: boolean
+  isActive: boolean
   href: string
 }
 
-const { showMarker, href } = Astro.props
+const { isActive, href } = Astro.props
 ---
 
 <li class="relative">
@@ -16,5 +16,5 @@ const { showMarker, href } = Astro.props
   >
     <slot />
   </a>
-  {showMarker && <Marker aria-hidden="true" class="absolute inset-0 m-auto" />}
+  {isActive && <Marker aria-hidden="true" class="absolute inset-0 m-auto" />}
 </li>

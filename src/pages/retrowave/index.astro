@@ -1,0 +1,79 @@
+---
+import Button from '@/components/retrowave/button.astro'
+import Layout from '@/layouts/retrowave-layout.astro'
+---
+
+<Layout>
+  <div
+    class="fixed inset-0 z-[-1] bg-[url('src/assets/retrowave-background.jpg')] bg-cover bg-center bg-no-repeat"
+  >
+  </div>
+  <main class="flex-1">
+    <div class="flex h-full flex-col items-start justify-center gap-9">
+      <h1 class="relative">
+        <span
+          id="prefix"
+          class="absolute -top-2 -left-2 z-10 -rotate-12 font-family-heading-2 text-5xl text-white sm:text-6xl md:-top-3.5 md:-left-3.5 lg:-top-5 lg:-left-5 lg:text-7xl"
+        >
+          I'm
+        </span>
+        <br />
+        <span
+          id="suffix"
+          class="relative font-family-heading text-6xl uppercase sm:text-7xl lg:text-8xl"
+        >
+          Koen
+        </span>
+      </h1>
+      <p class="font-family-tertiary tracking-tighter text-white">
+        I turn ideas and pixels into memorable experiences on the web.
+      </p>
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <Button href="https://www.euri.com/en/contact">work with me</Button>
+        <Button
+          href="https://www.linkedin.com/in/koen-vercauteren"
+          variant="secondary"
+        >
+          let's connect
+        </Button>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  #prefix {
+    text-shadow:
+      1px -1px 0 rgba(255, 255, 255, 0.5),
+      2px 1px 2px rgba(255, 0, 255, 0.85),
+      -3px -2px 3px rgba(0, 0, 255, 0.85),
+      1px -2px 0 rgba(255, 255, 255, 0.8);
+    color: rgb(255, 0, 234);
+  }
+
+  #suffix {
+    background: linear-gradient(
+      to bottom,
+      #ebf1f6 0%,
+      #abd3ee 50%,
+      #859ee2 51%,
+      #d5ebfb 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::before {
+      background: none;
+      content: 'Koen';
+      left: 0;
+      position: absolute;
+      text-shadow:
+        1px -1px 0 rgba(255, 255, 255, 0.5),
+        3px 1px 3px rgba(255, 0, 255, 0.85),
+        -3px -2px 3px rgba(0, 0, 255, 0.85),
+        1px -2px 0 rgba(255, 255, 255, 0.8);
+      z-index: -1;
+    }
+  }
+</style>

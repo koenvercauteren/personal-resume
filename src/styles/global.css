@@ -10,7 +10,19 @@
   --font-family-primary: "Inter", sans-serif;
   --font-family-secondary: "Lexend Mega", sans-serif;
 
+  --font-family-heading-2: "Grechen Fuemen", cursive;
+  --font-family-tertiary: "Press Start 2P", system-ui;
+
   --font-sans: var(--font-family-primary);
+}
+
+.retrowave {
+  --color-background: #14042d;
+  --color-primary: rgb(255, 0, 255);
+  --color-secondary: rgb(0, 0, 255);
+
+  --font-family-heading: "Russo One", sans-serif;
+  --font-family-secondary: "Orbitron", sans-serif;
 }
 
 *::selection {

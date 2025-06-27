@@ -1,0 +1,20 @@
+---
+type Props = {
+  isActive: boolean
+  href: string
+}
+
+const { isActive, href } = Astro.props
+---
+
+<li class="relative">
+  <a
+    {href}
+    class:list={[
+      'group relative z-10 flex items-center justify-center gap-1.5 font-family-tertiary text-xs font-medium text-white',
+      isActive && 'underline underline-offset-3'
+    ]}
+  >
+    <slot />
+  </a>
+</li>

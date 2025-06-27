@@ -1,0 +1,50 @@
+---
+type Props = {
+  variant?: 'primary' | 'secondary'
+  href: string
+}
+
+const { variant = 'primary', href } = Astro.props
+const isPrimary = variant === 'primary'
+---
+
+<a
+  {href}
+  data-retrowave-button
+  target="_blank"
+  class:list={['relative rounded-md']}
+>
+  <div
+    class="relative z-10 rounded-sm border-2 border-black bg-background p-3 font-family-secondary font-bold tracking-widest text-white uppercase before:absolute before:inset-0 before:z-20 before:rounded-sm before:bg-[rgba(255,255,255,0.1)]"
+  >
+    <slot />
+  </div>
+  <i
+    aria-hidden="true"
+    class="absolute -inset-0.5 rounded-md bg-linear-[var(--x)] from-blue-500 via-[rgba(255,255,255,0.2)] to-fuchsia-500"
+  ></i>
+  <i
+    aria-hidden="true"
+    class="absolute -inset-0.5 rounded-md bg-linear-[var(--x)] from-blue-500 via-[rgba(255,255,255,0.2)] to-fuchsia-500 blur-sm"
+  ></i>
+</a>
+
+<style>
+  :root {
+    --x: 45deg;
+  }
+</style>
+
+<script>
+  const buttonElements = document.querySelectorAll<HTMLAnchorElement>(
+    '[data-retrowave-button]'
+  )
+
+  buttonElements.forEach(buttonElement => {
+    buttonElement.addEventListener('mousemove', event => {
+      const rect = buttonElement.getBoundingClientRect()
+      const x = event.clientX * 2 - rect.left
+      buttonElement.style.setProperty('--x', `${x}deg`)
+    })
+  })
+</script>

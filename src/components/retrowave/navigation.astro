@@ -1,0 +1,83 @@
+---
+import HomeFilled from '@/assets/home-filled.svg'
+import Home from '@/assets/home.svg'
+import PersonFilled from '@/assets/person-filled.svg'
+import Person from '@/assets/person.svg'
+import ArticleFilled from '@/assets/view-timeline-filled.svg'
+import Article from '@/assets/view-timeline.svg'
+import NavigationItem from './navigation-item.astro'
+
+type Props = {
+  url: URL
+  prefix?: string
+}
+
+const { url, prefix = 'retrowave' } = Astro.props
+const isAbout = url.pathname.includes('about')
+const isExperience = url.pathname.includes('experience')
+const isHome = !isAbout && !isExperience
+---
+
+<nav>
+  <ul class="relative flex gap-6 rounded-md px-6 py-3">
+    <NavigationItem isActive={isHome} href={`/${prefix}`}>
+      <HomeFilled
+        aria-hidden="true"
+        class="hidden group-hover:block"
+        fill="white"
+      />
+      <Home aria-hidden="true" class="group-hover:hidden" fill="white" />
+      Home
+    </NavigationItem>
+    <NavigationItem isActive={isAbout} href={`/${prefix}/about`}>
+      <PersonFilled
+        aria-hidden="true"
+        class="hidden group-hover:block"
+        fill="white"
+      />
+      <Person aria-hidden="true" class="group-hover:hidden" fill="white" />
+      About
+    </NavigationItem>
+    <NavigationItem isActive={isExperience} href={`/${prefix}/experience`}>
+      <ArticleFilled
+        aria-hidden="true"
+        class="hidden group-hover:block"
+        fill="white"
+      />
+      <Article aria-hidden="true" class="group-hover:hidden" fill="white" />
+      Experience
+    </NavigationItem>
+  </ul>
+</nav>
+
+<style lang="scss">
+  ul {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    box-shadow:
+      inset 0 -6px 17px rgba(156, 191, 255, 0.35),
+      inset 0 6px 17px rgba(156, 191, 255, 0.35);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+      background-image: linear-gradient(
+        90deg,
+        transparent 2.56%,
+        rgba(255, 255, 255, 0.4) 51.48%,
+        transparent 97.44%
+      );
+    }
+  }
+</style>
