@@ -36,15 +36,17 @@ const isPrimary = variant === 'primary'
 </style>
 
 <script>
-  const buttonElements = document.querySelectorAll<HTMLAnchorElement>(
-    '[data-retrowave-button]'
-  )
+  document.addEventListener('astro:page-load', () => {
+    const buttonElements = document.querySelectorAll<HTMLAnchorElement>(
+      '[data-retrowave-button]'
+    )
 
-  buttonElements.forEach(buttonElement => {
-    buttonElement.addEventListener('mousemove', event => {
-      const rect = buttonElement.getBoundingClientRect()
-      const x = event.clientX * 2 - rect.left
-      buttonElement.style.setProperty('--x', `${x}deg`)
+    buttonElements.forEach(buttonElement => {
+      buttonElement.addEventListener('mousemove', event => {
+        const rect = buttonElement.getBoundingClientRect()
+        const x = event.clientX * 2 - rect.left
+        buttonElement.style.setProperty('--x', `${x}deg`)
+      })
     })
   })
 </script>
