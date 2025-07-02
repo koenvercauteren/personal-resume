@@ -34,7 +34,7 @@ import NeoWrapper from '@/components/neobrutalism/neo-wrapper.astro'
       />
     </div>
     <div class="flex flex-col gap-6 md:flex-row">
-      <Card class="md:max-w-xs lg:max-w-sm">
+      <Card class="md:max-w-2xs lg:max-w-md">
         <div class="relative w-full">
           <div
             class="relative w-[84%] after:absolute after:inset-0 after:rounded-lg after:bg-black after:content-['']"
@@ -70,7 +70,7 @@ import NeoWrapper from '@/components/neobrutalism/neo-wrapper.astro'
         <Card class="flex-1">
           <div class="flex items-center gap-3">
             <NeoWrapper>
-              <SchoolFilled />
+              <SchoolFilled aria-hidden="true" />
             </NeoWrapper>
             <h2 class="text-xl font-bold">Education</h2>
           </div>
@@ -85,10 +85,10 @@ import NeoWrapper from '@/components/neobrutalism/neo-wrapper.astro'
             and back-end development.
           </p>
         </Card>
-        <Card class="flex-1">
+        <Card>
           <div class="flex items-center gap-3">
             <NeoWrapper>
-              <FavoriteFilled />
+              <FavoriteFilled aria-hidden="true" />
             </NeoWrapper>
             <h2 class="text-xl font-bold">Interests</h2>
           </div>
@@ -100,7 +100,7 @@ import NeoWrapper from '@/components/neobrutalism/neo-wrapper.astro'
               <span class="font-semibold">Calisthenics</span>
             </NeoWrapper>
             <NeoWrapper variant="background" wide>
-              <span class="font-semibold">Weight training</span>
+              <span class="font-semibold">Weight Training</span>
             </NeoWrapper>
             <NeoWrapper variant="background" wide>
               <span class="font-semibold">Music</span>
@@ -109,7 +109,7 @@ import NeoWrapper from '@/components/neobrutalism/neo-wrapper.astro'
         </Card>
       </div>
     </div>
-    <h2 class="font-family-heading text-4xl font-black">
+    <h2 class="font-family-heading text-3xl font-black sm:text-4xl">
       Technologies & tools
     </h2>
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -166,7 +166,9 @@ import NeoWrapper from '@/components/neobrutalism/neo-wrapper.astro'
         <Image class="relative z-10 w-full" src={figmaStamp} alt="Figma" />
       </div>
     </div>
-    <h2 class="font-family-heading text-4xl font-black">Music I vibe to</h2>
+    <h2 class="font-family-heading text-3xl font-black sm:text-4xl">
+      Music I vibe to
+    </h2>
     <div
       class="relative after:absolute after:inset-0 after:rounded-lg after:bg-black after:content-['']"
     >

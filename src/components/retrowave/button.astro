@@ -2,9 +2,10 @@
 type Props = {
   variant?: 'primary' | 'secondary'
   href: string
+  class?: string
 }
 
-const { variant = 'primary', href } = Astro.props
+const { variant = 'primary', href, class: className } = Astro.props
 const isPrimary = variant === 'primary'
 ---
 
@@ -12,7 +13,7 @@ const isPrimary = variant === 'primary'
   {href}
   data-retrowave-button
   target="_blank"
-  class:list={['relative rounded-md']}
+  class:list={['relative rounded-md text-center', className]}
 >
   <div
     class="relative z-10 rounded-sm border-2 border-black bg-background p-3 font-family-secondary font-bold tracking-widest text-white uppercase before:absolute before:inset-0 before:z-20 before:rounded-sm before:bg-[rgba(255,255,255,0.1)]"

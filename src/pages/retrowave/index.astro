@@ -1,11 +1,14 @@
 ---
 import Button from '@/components/retrowave/button.astro'
 import Layout from '@/layouts/retrowave-layout.astro'
+import retroWaveBackground from '@/assets/retrowave-background.jpg'
 ---
 
 <Layout>
   <div
-    class="fixed inset-0 z-[-1] bg-[url('src/assets/retrowave-background.jpg')] bg-cover bg-center bg-no-repeat"
+    id="background"
+    class="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${retroWaveBackground.src})` }}
   >
   </div>
   <main class="flex-1">
