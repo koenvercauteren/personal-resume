@@ -16,13 +16,8 @@
   --font-sans: var(--font-family-primary);
 }
 
-.retrowave {
-  --color-background: #14042d;
-  --color-primary: rgb(255, 0, 255);
-  --color-secondary: rgb(0, 0, 255);
-
-  --font-family-heading: "Russo One", sans-serif;
-  --font-family-secondary: "Orbitron", sans-serif;
+html {
+  scrollbar-gutter: stable;
 }
 
 *::selection {
@@ -30,6 +25,13 @@
   color: white;
 }
 
-html {
-  scrollbar-gutter: stable;
+.retrowave {
+  --color-background: #14042d;
+  --color-primary: rgb(255, 0, 255);
+  --color-secondary: rgb(0, 0, 255);
+
+  --font-family-heading: "Russo One", sans-serif;
+  --font-family-secondary: "Orbitron", sans-serif;
+
+  scrollbar-gutter: unset;
 }

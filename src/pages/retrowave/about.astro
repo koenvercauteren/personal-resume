@@ -5,17 +5,20 @@ import { Image } from 'astro:assets'
 import profileImage from '@/assets/retrowave-profile-image.jpg'
 import SchoolFilled from '@/assets/school-filled.svg'
 import FavoriteFilled from '@/assets/favorite-filled.svg'
-import Button from '@/components/retrowave/button.astro'
+import Title from '@/components/retrowave/title.astro'
+import astroStamp from '@/assets/retrowave-astro-stamp.svg'
+import figmaStamp from '@/assets/retrowave-figma-stamp.svg'
+import litStamp from '@/assets/retrowave-lit-stamp.svg'
+import nodejsStamp from '@/assets/retrowave-nodejs-stamp.svg'
+import reactStamp from '@/assets/retrowave-react-stamp.svg'
+import tailwindStamp from '@/assets/retrowave-tailwind-stamp.svg'
+import typescriptStamp from '@/assets/retrowave-typescript-stamp.svg'
+import vscodeStamp from '@/assets/retrowave-vscode-stamp.svg'
 ---
 
 <Layout>
   <main class="flex flex-1 flex-col gap-9">
-    <h1
-      data-text="About me"
-      class="relative font-family-heading text-5xl sm:text-6xl"
-    >
-      About me
-    </h1>
+    <Title text="About me" />
     <div class="flex flex-col gap-6 md:flex-row">
       <Card class="md:max-w-2xs lg:max-w-md">
         <div class="relative -mx-6 -mt-6">
@@ -37,12 +40,6 @@ import Button from '@/components/retrowave/button.astro'
           <b> empathy for the user</b>. That philosophy guides every decision I
           make, from layout and interaction to performance and accessibility.
         </p>
-        <Button
-          href="https://www.linkedin.com/in/koen-vercauteren"
-          variant="secondary"
-        >
-          let's connect
-        </Button>
       </Card>
       <div class="flex flex-1 flex-col gap-6">
         <Card class="flex-1">
@@ -67,25 +64,62 @@ import Button from '@/components/retrowave/button.astro'
             <h2 class="text-md font-family-tertiary text-white">Interests</h2>
           </div>
           <div class="flex flex-wrap gap-2">
-            <div class="test rounded-full px-3 py-1.5">
+            <div class="pill rounded-full px-3 py-1.5">
               <span class="font-semibold text-white">Video games</span>
             </div>
-            <div class="test rounded-full px-3 py-1.5">
+            <div class="pill rounded-full px-3 py-1.5">
               <span class="font-semibold text-white">Calisthenics</span>
             </div>
-            <div class="test rounded-full px-3 py-1.5">
+            <div class="pill rounded-full px-3 py-1.5">
               <span class="font-semibold text-white">Weight training</span>
             </div>
-            <div class="test rounded-full px-3 py-1.5">
+            <div class="pill rounded-full px-3 py-1.5">
               <span class="font-semibold text-white">Music</span>
             </div>
           </div>
         </Card>
       </div>
     </div>
-    <h2 class="font-family-heading text-3xl sm:text-4xl">
-      Technologies & tools
-    </h2>
+    <Title text="Technologies & tools" variant="h2" />
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+      <Card class="!p-0.5">
+        <Image src={reactStamp} alt="React" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={typescriptStamp} alt="TypeScript" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={tailwindStamp} alt="Tailwind" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={astroStamp} alt="Astro" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={litStamp} alt="Lit" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={nodejsStamp} alt="NodeJS" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={vscodeStamp} alt="Visual Studio Code" />
+      </Card>
+      <Card class="!p-0.5">
+        <Image src={figmaStamp} alt="Figma" />
+      </Card>
+    </div>
+    <Title text="Music I vibe to" variant="h2" />
+    <div
+      class="relative after:absolute after:inset-0 after:rounded-lg after:bg-black after:content-['']"
+    >
+      <iframe
+        title="Spotify playlist"
+        class="relative z-10 rounded-xl"
+        src="https://open.spotify.com/embed/playlist/5iurwNbNFeFqJ9uCH3Witt?utm_source=generator"
+        width="100%"
+        height="425"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
   </main>
 
   <style lang="scss">
@@ -93,33 +127,7 @@ import Button from '@/components/retrowave/button.astro'
       color: white;
     }
 
-    h1 {
-      background: linear-gradient(
-        to bottom,
-        #ebf1f6 0%,
-        #abd3ee 50%,
-        #859ee2 51%,
-        #d5ebfb 100%
-      );
-
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      &::before {
-        background: none;
-        content: attr(data-text);
-        left: 0;
-        position: absolute;
-        text-shadow:
-          1px -1px 0 rgba(255, 255, 255, 0.5),
-          3px 1px 3px rgba(255, 0, 255, 0.85),
-          -3px -2px 3px rgba(0, 0, 255, 0.85),
-          1px -2px 0 rgba(255, 255, 255, 0.8);
-        z-index: -1;
-      }
-    }
-
-    .test {
+    .pill {
       background: rgba(0, 0, 255, 0.4);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
