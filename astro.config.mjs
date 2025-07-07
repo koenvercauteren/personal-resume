@@ -14,7 +14,7 @@ export default defineConfig({
     experimentalLayout: "constrained",
   },
   redirects: {
-    "/": "/retrowave",
+    "/": "/neobrutalism",
   },
   vite: {
     plugins: [tailwindcss()],
