@@ -1,4 +1,4 @@
-import styles from './Particles.module.scss'
+import styles from "./particles.module.scss";
 
 function Particles() {
   return (
@@ -7,7 +7,7 @@ function Particles() {
       <div className={styles.bigParticles}></div>
       <div className={styles.biggestParticles}></div>
     </div>
-  )
+  );
 }
 
-export default Particles
+export default Particles;
