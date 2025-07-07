@@ -1,0 +1,47 @@
+---
+import DarkModeIcon from '@/assets/dark-mode.svg'
+---
+
+<button
+  type="button"
+  class="neobrutalism-toggle cursor-pointer rounded-md border-2 border-black bg-primary p-3 font-family-secondary font-semibold uppercase shadow-[3px_3px_0px_rgb(0,0,0)] transition-all hover:translate-[1px] hover:shadow-[2px_2px_0px_rgb(0,0,0)] active:translate-[3px] active:shadow-none"
+  title="Switch to retrowave theme"
+  aria-label="Switch to retrowave theme"
+>
+  <DarkModeIcon class="size-6" aria-hidden="true" />
+</button>
+
+<script>
+  function handleThemeToggle() {
+    // Get current pathname
+    const currentPath = window.location.pathname
+
+    // Transform neobrutalism path to retrowave path
+    let newPath = currentPath
+
+    if (currentPath.startsWith('/neobrutalism/')) {
+      // Replace /neobrutalism/ with /retrowave/
+      newPath = currentPath.replace('/neobrutalism/', '/retrowave/')
+    } else if (currentPath === '/neobrutalism') {
+      // Handle /neobrutalism without trailing slash
+      newPath = '/retrowave'
+    } else if (currentPath === '/') {
+      // Handle root path - assume it should go to retrowave index
+      newPath = '/retrowave/'
+    } else {
+      // For any other path, try to add retrowave prefix
+      newPath = '/retrowave' + currentPath
+    }
+
+    // Navigate to the new path
+    window.location.href = newPath
+  }
+
+  // Attach event listener to the button
+  document.addEventListener('astro:page-load', () => {
+    const themeToggleBtn = document.querySelector('.neobrutalism-toggle')
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', handleThemeToggle)
+    }
+  })
+</script>

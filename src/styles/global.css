@@ -32,6 +32,4 @@ html {
 
   --font-family-heading: "Russo One", sans-serif;
   --font-family-secondary: "Orbitron", sans-serif;
-
-  scrollbar-gutter: unset;
 }

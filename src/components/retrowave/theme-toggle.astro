@@ -1,0 +1,67 @@
+---
+import LightModeIcon from '@/assets/light-mode.svg'
+---
+
+<button
+  type="button"
+  class="retrowave-toggle flex cursor-pointer items-center justify-center rounded-xl p-3 font-family-secondary font-semibold uppercase transition-all"
+  title="Switch to neobrutalism theme"
+  aria-label="Switch to neobrutalism theme"
+>
+  <LightModeIcon class="size-6 fill-white" aria-hidden="true" />
+</button>
+
+<style lang="scss">
+  .retrowave-toggle {
+    background: rgba(255, 0, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 255, 0.3);
+
+    &:hover {
+      background: rgba(255, 0, 255, 0.3);
+      border: 1px solid rgba(255, 0, 255, 0.4);
+    }
+
+    &:active {
+      background: rgba(255, 0, 255, 0.4);
+      border: 1px solid rgba(255, 0, 255, 0.5);
+    }
+  }
+</style>
+
+<script>
+  function handleThemeToggle() {
+    // Get current pathname
+    const currentPath = window.location.pathname
+
+    // Transform retrowave path to neobrutalism path
+    let newPath = currentPath
+
+    if (currentPath.startsWith('/retrowave/')) {
+      // Replace /retrowave/ with /neobrutalism/
+      newPath = currentPath.replace('/retrowave/', '/neobrutalism/')
+    } else if (currentPath === '/retrowave') {
+      // Handle /retrowave without trailing slash
+      newPath = '/neobrutalism'
+    } else if (currentPath === '/') {
+      // Handle root path - assume it should go to neobrutalism index
+      newPath = '/neobrutalism/'
+    } else {
+      // For any other path, try to add neobrutalism prefix
+      newPath = '/neobrutalism' + currentPath
+    }
+
+    // Navigate to the new path
+    window.location.href = newPath
+  }
+
+  // Attach event listener to the button
+  document.addEventListener('astro:page-load', () => {
+    const themeToggleBtn = document.querySelector('.retrowave-toggle')
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', handleThemeToggle)
+    }
+  })
+</script>
