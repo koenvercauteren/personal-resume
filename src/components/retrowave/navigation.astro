@@ -14,12 +14,12 @@ type Props = {
 
 const { url, prefix = 'retrowave' } = Astro.props
 const isAbout = url.pathname.includes('about')
-const isExperience = url.pathname.includes('experience')
-const isHome = !isAbout && !isExperience
+const isCareer = url.pathname.includes('career')
+const isHome = !isAbout && !isCareer
 ---
 
 <nav>
-  <ul class="relative flex gap-6 rounded-full px-6 py-3">
+  <ul class="relative flex gap-6 rounded-full px-9 py-3 sm:px-6">
     <NavigationItem isActive={isHome} href={`/${prefix}`}>
       <HomeFilled
         aria-hidden="true"
@@ -38,14 +38,14 @@ const isHome = !isAbout && !isExperience
       <Person aria-hidden="true" class="group-hover:hidden" fill="white" />
       About
     </NavigationItem>
-    <NavigationItem isActive={isExperience} href={`/${prefix}/experience`}>
+    <NavigationItem isActive={isCareer} href={`/${prefix}/career`}>
       <ArticleFilled
         aria-hidden="true"
         class="hidden group-hover:block"
         fill="white"
       />
       <Article aria-hidden="true" class="group-hover:hidden" fill="white" />
-      Experience
+      Career
     </NavigationItem>
   </ul>
 </nav>

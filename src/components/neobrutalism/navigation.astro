@@ -14,8 +14,8 @@ type Props = {
 
 const { url, prefix = 'neobrutalism' } = Astro.props
 const isAbout = url.pathname.includes('about')
-const isExperience = url.pathname.includes('experience')
-const isHome = !isAbout && !isExperience
+const isCareer = url.pathname.includes('career')
+const isHome = !isAbout && !isCareer
 ---
 
 <nav>
@@ -32,10 +32,10 @@ const isHome = !isAbout && !isExperience
       <Person aria-hidden="true" class="hidden group-hover:block" />
       About
     </NavigationItem>
-    <NavigationItem isActive={isExperience} href={`/${prefix}/experience`}>
+    <NavigationItem isActive={isCareer} href={`/${prefix}/career`}>
       <ArticleFilled aria-hidden="true" class="group-hover:hidden" />
       <Article aria-hidden="true" class="hidden group-hover:block" />
-      Experience
+      Career
     </NavigationItem>
   </ul>
 </nav>

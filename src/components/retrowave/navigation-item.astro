@@ -11,7 +11,7 @@ const { isActive, href } = Astro.props
   <a
     {href}
     class:list={[
-      'group relative z-10 flex items-center justify-center gap-1.5 font-family-tertiary text-xs font-medium text-white',
+      'group relative z-10 flex flex-col items-center justify-center gap-1.5 font-family-tertiary text-xs font-medium text-white sm:flex-row',
       isActive && 'underline underline-offset-3'
     ]}
   >
