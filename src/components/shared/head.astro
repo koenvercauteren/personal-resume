@@ -1,0 +1,33 @@
+---
+import { ClientRouter } from 'astro:transitions'
+
+const isProd = import.meta.env.PROD
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Koen Vercauteren — Euricom</title>
+
+  <ClientRouter />
+
+  {
+    isProd && (
+      <script
+        is:inline
+        defer
+        data-domain="vercauteren.dev"
+        src="/js/script.js"
+      />
+    )
+  }
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
